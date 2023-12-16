@@ -1,0 +1,75 @@
+﻿{
+  "name": "IISSnezhko_kursovayaДолжности",
+  "modelName": "i-i-s-snezhko-kursovaya-должности",
+  "className": "Должности",
+  "nameSpace": "IIS.Snezhko_kursovaya",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "кодДолжности",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "наименование",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ДолжностиE",
+      "modelName": "i-i-s-snezhko-kursovaya-должности",
+      "attrs": [
+        {
+          "name": "кодДолжности",
+          "caption": "Код должности",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ДолжностиL",
+      "modelName": "i-i-s-snezhko-kursovaya-должности",
+      "attrs": [
+        {
+          "name": "кодДолжности",
+          "caption": "Код должности",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

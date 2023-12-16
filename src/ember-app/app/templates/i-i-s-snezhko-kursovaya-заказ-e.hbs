@@ -1,0 +1,156 @@
+<h3 class="ui header">{{t "forms.i-i-s-snezhko-kursovaya-заказ-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.кодЗаказа
+      class=(if (v-get validationModel "кодЗаказа" "isInvalid") "error")
+      label=(t "forms.i-i-s-snezhko-kursovaya-заказ-e.кодЗаказа-caption")
+      data-test-i-i-s-snezhko-kursovaya-заказ-e-кодЗаказа=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "кодЗаказа" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-snezhko-kursovaya-заказ-e.дата-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.дата
+      class=(if (v-get validationModel "дата" "isInvalid") "error")
+      data-test-i-i-s-snezhko-kursovaya-заказ-e-дата=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "дата" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.время
+      class=(if (v-get validationModel "время" "isInvalid") "error")
+      label=(t "forms.i-i-s-snezhko-kursovaya-заказ-e.время-caption")
+      data-test-i-i-s-snezhko-kursovaya-заказ-e-время=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "время" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-snezhko-kursovaya-заказ-e-типОплаты="true">
+    <label>{{t "forms.i-i-s-snezhko-kursovaya-заказ-e.типОплаты-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-snezhko-kursovaya-тип-оплаты")
+      value=model.типОплаты
+      class=(if (v-get validationModel "типОплаты" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "типОплаты" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.комментарий
+      class=(if (v-get validationModel "комментарий" "isInvalid") "error")
+      label=(t "forms.i-i-s-snezhko-kursovaya-заказ-e.комментарий-caption")
+      data-test-i-i-s-snezhko-kursovaya-заказ-e-комментарий=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "комментарий" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.сумма
+      class=(if (v-get validationModel "сумма" "isInvalid") "error")
+      label=(t "forms.i-i-s-snezhko-kursovaya-заказ-e.сумма-caption")
+      data-test-i-i-s-snezhko-kursovaya-заказ-e-сумма=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "сумма" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-snezhko-kursovaya-заказ-e.бокс-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.бокс
+      displayAttributeName="номерБокса"
+      autocomplete=true
+      relationName="бокс"
+      projection="БоксL"
+      title=(t "forms.i-i-s-snezhko-kursovaya-заказ-e.бокс-caption")
+      readonly=readonly
+      componentName="боксLookup"
+      class=(if (v-get validationModel "бокс" "isInvalid") "error")
+      data-test-i-i-s-snezhko-kursovaya-заказ-e-бокс=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "бокс" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-snezhko-kursovaya-заказ-e.клиенты-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.клиенты
+      displayAttributeName="фамилия"
+      autocomplete=true
+      relationName="клиенты"
+      projection="КлиентыL"
+      title=(t "forms.i-i-s-snezhko-kursovaya-заказ-e.клиенты-caption")
+      readonly=readonly
+      componentName="клиентыLookup"
+      class=(if (v-get validationModel "клиенты" "isInvalid") "error")
+      data-test-i-i-s-snezhko-kursovaya-заказ-e-клиенты=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "клиенты" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-snezhko-kursovaya-заказ-e.сотрудники-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.сотрудники
+      displayAttributeName="фамилия"
+      autocomplete=true
+      relationName="сотрудники"
+      projection="СотрудникиL"
+      title=(t "forms.i-i-s-snezhko-kursovaya-заказ-e.сотрудники-caption")
+      readonly=readonly
+      componentName="сотрудникиLookup"
+      class=(if (v-get validationModel "сотрудники" "isInvalid") "error")
+      data-test-i-i-s-snezhko-kursovaya-заказ-e-сотрудники=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "сотрудники" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-snezhko-kursovaya-заказ-e.составЗаказа-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="составЗаказаGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.составЗаказа
+      content=model.составЗаказа
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "составЗаказа" "isInvalid") "error")
+      data-test-i-i-s-snezhko-kursovaya-заказ-e-составЗаказа=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "составЗаказа" "message")}}
+  </div>
+</form>

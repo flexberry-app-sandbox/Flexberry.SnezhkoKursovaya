@@ -1,0 +1,173 @@
+﻿{
+  "name": "IISSnezhko_kursovayaКлиенты",
+  "modelName": "i-i-s-snezhko-kursovaya-клиенты",
+  "className": "Клиенты",
+  "nameSpace": "IIS.Snezhko_kursovaya",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "датаРождения",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "имя",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "кодКлиента",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номерТелефона",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "отчество",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "фамилия",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [
+    {
+      "name": "автомобиль",
+      "relatedTo": "i-i-s-snezhko-kursovaya-автомобиль",
+      "inverse": "клиенты"
+    }
+  ],
+  "projections": [
+    {
+      "name": "КлиентыE",
+      "modelName": "i-i-s-snezhko-kursovaya-клиенты",
+      "attrs": [
+        {
+          "name": "кодКлиента",
+          "caption": "Код клиента",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "фамилия",
+          "caption": "Фамилия",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "имя",
+          "caption": "Имя",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "отчество",
+          "caption": "Отчество",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "датаРождения",
+          "caption": "Дата рождения",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "номерТелефона",
+          "caption": "Номер телефона",
+          "hidden": false,
+          "index": 5
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "АвтомобильE",
+          "caption": "Автомобиль",
+          "name": "автомобиль",
+          "relatedTo": "i-i-s-snezhko-kursovaya-автомобиль",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "КлиентыL",
+      "modelName": "i-i-s-snezhko-kursovaya-клиенты",
+      "attrs": [
+        {
+          "name": "кодКлиента",
+          "caption": "Код клиента",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "фамилия",
+          "caption": "Фамилия",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "имя",
+          "caption": "Имя",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "отчество",
+          "caption": "Отчество",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "датаРождения",
+          "caption": "Дата рождения",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "номерТелефона",
+          "caption": "Номер телефона",
+          "hidden": false,
+          "index": 5
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

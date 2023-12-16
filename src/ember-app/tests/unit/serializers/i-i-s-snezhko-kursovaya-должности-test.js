@@ -1,0 +1,42 @@
+import { moduleForModel, test } from 'ember-qunit';
+
+moduleForModel('i-i-s-snezhko-kursovaya-должности', 'Unit | Serializer | i-i-s-snezhko-kursovaya-должности', {
+  // Specify the other units that are required for this test.
+  needs: [
+    'serializer:i-i-s-snezhko-kursovaya-должности',
+    'service:syncer',
+    'transform:file',
+    'transform:decimal',
+    'transform:guid',
+
+    'transform:i-i-s-snezhko-kursovaya-единицы',
+    'transform:i-i-s-snezhko-kursovaya-тип-автомобиля',
+    'transform:i-i-s-snezhko-kursovaya-тип-оплаты',
+
+    'model:i-i-s-snezhko-kursovaya-автомобиль',
+    'model:i-i-s-snezhko-kursovaya-бокс',
+    'model:i-i-s-snezhko-kursovaya-детали',
+    'model:i-i-s-snezhko-kursovaya-должности',
+    'model:i-i-s-snezhko-kursovaya-заказ',
+    'model:i-i-s-snezhko-kursovaya-клиенты',
+    'model:i-i-s-snezhko-kursovaya-состав-заказа',
+    'model:i-i-s-snezhko-kursovaya-состав-услуги',
+    'model:i-i-s-snezhko-kursovaya-сотрудники',
+    'model:i-i-s-snezhko-kursovaya-услуга',
+    'validator:ds-error',
+    'validator:presence',
+    'validator:number',
+    'validator:date',
+    'validator:belongs-to',
+    'validator:has-many',
+  ],
+});
+
+// Replace this with your real tests.
+test('it serializes records', function(assert) {
+  let record = this.subject();
+
+  let serializedRecord = record.serialize();
+
+  assert.ok(serializedRecord);
+});

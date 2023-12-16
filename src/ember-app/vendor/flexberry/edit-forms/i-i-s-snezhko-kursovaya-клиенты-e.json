@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Клиенты",
+  "name": "IISSnezhko_kursovayaКлиентыE",
+  "className": "КлиентыE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-snezhko-kursovaya-клиенты",
+      "modelProjection": "КлиентыE"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-snezhko-kursovaya-должности-e",
+  "editForm": "i-i-s-snezhko-kursovaya-должности-e",
+  "external": false,
+  "caption": "Должности",
+  "name": "IISSnezhko_kursovayaДолжностиL",
+  "className": "ДолжностиL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-snezhko-kursovaya-должности",
+      "modelProjection": "ДолжностиL"
+    }
+  ]
+}

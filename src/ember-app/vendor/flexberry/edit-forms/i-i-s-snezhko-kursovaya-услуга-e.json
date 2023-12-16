@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": "детали",
+      "displayAttributeName": null,
+      "required": true,
+      "relationName": "СоставУслуги.Детали",
+      "projection": "ДеталиL",
+      "detailModelName": "i-i-s-snezhko-kursovaya-состав-услуги"
+    }
+  ],
+  "external": false,
+  "caption": "Услуга",
+  "name": "IISSnezhko_kursovayaУслугаE",
+  "className": "УслугаE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-snezhko-kursovaya-услуга",
+      "modelProjection": "УслугаE"
+    }
+  ]
+}

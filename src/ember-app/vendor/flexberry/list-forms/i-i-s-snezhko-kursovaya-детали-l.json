@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-snezhko-kursovaya-детали-e",
+  "editForm": "i-i-s-snezhko-kursovaya-детали-e",
+  "external": false,
+  "caption": "Детали",
+  "name": "IISSnezhko_kursovayaДеталиL",
+  "className": "ДеталиL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-snezhko-kursovaya-детали",
+      "modelProjection": "ДеталиL"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+﻿{
+  "nameSpace": "IIS.Snezhko_kursovaya",
+  "className": "ТипАвтомобиля",
+  "enumObjects": {
+    "1": "Легковой",
+    "2": "Грузовой"
+  }
+}

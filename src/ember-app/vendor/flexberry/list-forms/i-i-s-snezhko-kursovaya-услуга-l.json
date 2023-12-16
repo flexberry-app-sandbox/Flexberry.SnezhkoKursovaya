@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-snezhko-kursovaya-услуга-e",
+  "editForm": "i-i-s-snezhko-kursovaya-услуга-e",
+  "external": false,
+  "caption": "Услуга",
+  "name": "IISSnezhko_kursovayaУслугаL",
+  "className": "УслугаL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-snezhko-kursovaya-услуга",
+      "modelProjection": "УслугаL"
+    }
+  ]
+}

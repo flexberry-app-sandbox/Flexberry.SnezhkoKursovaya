@@ -1,0 +1,96 @@
+﻿{
+  "name": "IISSnezhko_kursovayaБокс",
+  "modelName": "i-i-s-snezhko-kursovaya-бокс",
+  "className": "Бокс",
+  "nameSpace": "IIS.Snezhko_kursovaya",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "номерБокса",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "площадь",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "типАвтомобиля",
+      "type": "i-i-s-snezhko-kursovaya-тип-автомобиля",
+      "flexberryType": "ТипАвтомобиля",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "БоксE",
+      "modelName": "i-i-s-snezhko-kursovaya-бокс",
+      "attrs": [
+        {
+          "name": "номерБокса",
+          "caption": "Номер бокса",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "площадь",
+          "caption": "Площадь",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "типАвтомобиля",
+          "caption": "Тип автомобиля",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "БоксL",
+      "modelName": "i-i-s-snezhko-kursovaya-бокс",
+      "attrs": [
+        {
+          "name": "номерБокса",
+          "caption": "Номер бокса",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "площадь",
+          "caption": "Площадь",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "типАвтомобиля",
+          "caption": "Тип автомобиля",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,93 @@
+﻿{
+  "name": "IISSnezhko_kursovayaАвтомобиль",
+  "modelName": "i-i-s-snezhko-kursovaya-автомобиль",
+  "className": "Автомобиль",
+  "nameSpace": "IIS.Snezhko_kursovaya",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "госНомер",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "марка",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "типАвтомобиля",
+      "type": "i-i-s-snezhko-kursovaya-тип-автомобиля",
+      "flexberryType": "ТипАвтомобиля",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "цвет",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "клиенты",
+      "relatedTo": "i-i-s-snezhko-kursovaya-клиенты",
+      "inverse": "автомобиль"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "АвтомобильE",
+      "modelName": "i-i-s-snezhko-kursovaya-автомобиль",
+      "attrs": [
+        {
+          "name": "госНомер",
+          "caption": "Гос номер",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "цвет",
+          "caption": "Цвет",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "марка",
+          "caption": "Марка",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "типАвтомобиля",
+          "caption": "Тип автомобиля",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

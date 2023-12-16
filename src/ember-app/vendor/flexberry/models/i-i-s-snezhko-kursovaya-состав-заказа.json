@@ -1,0 +1,66 @@
+﻿{
+  "name": "IISSnezhko_kursovayaСоставЗаказа",
+  "modelName": "i-i-s-snezhko-kursovaya-состав-заказа",
+  "className": "СоставЗаказа",
+  "nameSpace": "IIS.Snezhko_kursovaya",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "услуга",
+      "relatedTo": "i-i-s-snezhko-kursovaya-услуга",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "заказ",
+      "relatedTo": "i-i-s-snezhko-kursovaya-заказ",
+      "inverse": "составЗаказа"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "СоставЗаказаE",
+      "modelName": "i-i-s-snezhko-kursovaya-состав-заказа",
+      "attrs": [],
+      "belongsTo": [
+        {
+          "lookupValue": "Наименование",
+          "lookupValueField": "наименование",
+          "relationName": "Услуга",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Наименование",
+              "hidden": true,
+              "index": 1
+            },
+            {
+              "name": "цена",
+              "caption": "Цена",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": 0,
+          "type": "standard",
+          "caption": "Услуга",
+          "name": "услуга",
+          "relatedTo": "i-i-s-snezhko-kursovaya-услуга",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-snezhko-kursovaya-сотрудники-e",
+  "editForm": "i-i-s-snezhko-kursovaya-сотрудники-e",
+  "external": false,
+  "caption": "Сотрудники",
+  "name": "IISSnezhko_kursovayaСотрудникиL",
+  "className": "СотрудникиL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-snezhko-kursovaya-сотрудники",
+      "modelProjection": "СотрудникиL"
+    }
+  ]
+}

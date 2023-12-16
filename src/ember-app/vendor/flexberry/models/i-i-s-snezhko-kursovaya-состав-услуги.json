@@ -1,0 +1,92 @@
+﻿{
+  "name": "IISSnezhko_kursovayaСоставУслуги",
+  "modelName": "i-i-s-snezhko-kursovaya-состав-услуги",
+  "className": "СоставУслуги",
+  "nameSpace": "IIS.Snezhko_kursovaya",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "единицы",
+      "type": "i-i-s-snezhko-kursovaya-единицы",
+      "flexberryType": "Единицы",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "количество",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "детали",
+      "relatedTo": "i-i-s-snezhko-kursovaya-детали",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "услуга",
+      "relatedTo": "i-i-s-snezhko-kursovaya-услуга",
+      "inverse": "составУслуги"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "СоставУслугиE",
+      "modelName": "i-i-s-snezhko-kursovaya-состав-услуги",
+      "attrs": [
+        {
+          "name": "количество",
+          "caption": "Количество",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "единицы",
+          "caption": "Единицы",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Детали",
+          "belongsTo": [],
+          "hidden": true,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Наименование",
+              "hidden": true,
+              "index": 0
+            }
+          ],
+          "index": 3,
+          "type": "default",
+          "caption": "Наименование",
+          "name": "детали",
+          "relatedTo": "i-i-s-snezhko-kursovaya-детали",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

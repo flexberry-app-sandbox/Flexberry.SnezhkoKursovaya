@@ -1,0 +1,11 @@
+﻿{
+  "nameSpace": "IIS.Snezhko_kursovaya",
+  "className": "Единицы",
+  "enumObjects": {
+    "1": "Шт",
+    "2": "Кг",
+    "3": "Г",
+    "4": "Л",
+    "5": "Мл"
+  }
+}

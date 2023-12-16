@@ -1,0 +1,104 @@
+﻿{
+  "applicationCaption": "Snezhko_kursovaya",
+  "applicationTitle": "Snezhko_kursovaya",
+  "items": [
+    {
+      "link": null,
+      "menuName": "клиенты",
+      "caption": "Клиенты",
+      "title": "Клиенты",
+      "children": [
+        {
+          "link": "i-i-s-snezhko-kursovaya-клиенты-l",
+          "menuName": null,
+          "caption": "Клиенты",
+          "title": "Клиенты",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "справочник-услуг",
+      "caption": "Справочник услуг",
+      "title": "Справочник услуг",
+      "children": [
+        {
+          "link": "i-i-s-snezhko-kursovaya-услуга-l",
+          "menuName": null,
+          "caption": "Услуга",
+          "title": "Услуга",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "сотрудники",
+      "caption": "Сотрудники",
+      "title": "Сотрудники",
+      "children": [
+        {
+          "link": "i-i-s-snezhko-kursovaya-сотрудники-l",
+          "menuName": null,
+          "caption": "Сотрудники",
+          "title": "Сотрудники",
+          "children": null
+        },
+        {
+          "link": "i-i-s-snezhko-kursovaya-должности-l",
+          "menuName": null,
+          "caption": "Должности",
+          "title": "Должности",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "бокс",
+      "caption": "Бокс",
+      "title": "Бокс",
+      "children": [
+        {
+          "link": "i-i-s-snezhko-kursovaya-бокс-l",
+          "menuName": null,
+          "caption": "Бокс",
+          "title": "Бокс",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "справочник-детали",
+      "caption": "Справочник детали",
+      "title": "Справочник детали",
+      "children": [
+        {
+          "link": "i-i-s-snezhko-kursovaya-детали-l",
+          "menuName": null,
+          "caption": "Детали",
+          "title": "Детали",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "заказы",
+      "caption": "Заказы",
+      "title": "Заказы",
+      "children": [
+        {
+          "link": "i-i-s-snezhko-kursovaya-заказ-l",
+          "menuName": null,
+          "caption": "Заказ",
+          "title": "Заказ",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

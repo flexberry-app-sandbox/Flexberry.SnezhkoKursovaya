@@ -1,0 +1,323 @@
+﻿{
+  "name": "IISSnezhko_kursovayaЗаказ",
+  "modelName": "i-i-s-snezhko-kursovaya-заказ",
+  "className": "Заказ",
+  "nameSpace": "IIS.Snezhko_kursovaya",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "время",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "дата",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "кодЗаказа",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "комментарий",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "сумма",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "типОплаты",
+      "type": "i-i-s-snezhko-kursovaya-тип-оплаты",
+      "flexberryType": "ТипОплаты",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "бокс",
+      "relatedTo": "i-i-s-snezhko-kursovaya-бокс",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "клиенты",
+      "relatedTo": "i-i-s-snezhko-kursovaya-клиенты",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "сотрудники",
+      "relatedTo": "i-i-s-snezhko-kursovaya-сотрудники",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "составЗаказа",
+      "relatedTo": "i-i-s-snezhko-kursovaya-состав-заказа",
+      "inverse": "заказ"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ЗаказE",
+      "modelName": "i-i-s-snezhko-kursovaya-заказ",
+      "attrs": [
+        {
+          "name": "кодЗаказа",
+          "caption": "Код заказа",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "время",
+          "caption": "Время",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "типОплаты",
+          "caption": "Тип оплаты",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "комментарий",
+          "caption": "Комментарий",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "сумма",
+          "caption": "Сумма",
+          "hidden": false,
+          "index": 5
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "НомерБокса",
+          "lookupValueField": "номерБокса",
+          "relationName": "Бокс",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номерБокса",
+              "caption": "Номер бокса",
+              "hidden": true,
+              "index": 7
+            }
+          ],
+          "index": 6,
+          "type": "standard",
+          "caption": "Бокс",
+          "name": "бокс",
+          "relatedTo": "i-i-s-snezhko-kursovaya-бокс",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Фамилия",
+          "lookupValueField": "фамилия",
+          "relationName": "Клиенты",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фамилия",
+              "caption": "Фамилия",
+              "hidden": true,
+              "index": 9
+            }
+          ],
+          "index": 8,
+          "type": "standard",
+          "caption": "Клиенты",
+          "name": "клиенты",
+          "relatedTo": "i-i-s-snezhko-kursovaya-клиенты",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Фамилия",
+          "lookupValueField": "фамилия",
+          "relationName": "Сотрудники",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фамилия",
+              "caption": "Фамилия",
+              "hidden": true,
+              "index": 11
+            }
+          ],
+          "index": 10,
+          "type": "standard",
+          "caption": "Сотрудники",
+          "name": "сотрудники",
+          "relatedTo": "i-i-s-snezhko-kursovaya-сотрудники",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "СоставЗаказаE",
+          "caption": "Состав заказа",
+          "name": "составЗаказа",
+          "relatedTo": "i-i-s-snezhko-kursovaya-состав-заказа",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ЗаказL",
+      "modelName": "i-i-s-snezhko-kursovaya-заказ",
+      "attrs": [
+        {
+          "name": "кодЗаказа",
+          "caption": "Код заказа",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "время",
+          "caption": "Время",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "типОплаты",
+          "caption": "Тип оплаты",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "комментарий",
+          "caption": "Комментарий",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "сумма",
+          "caption": "Сумма",
+          "hidden": false,
+          "index": 5
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Бокс",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номерБокса",
+              "caption": "Номер бокса",
+              "hidden": false,
+              "index": 6
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Номер бокса",
+          "name": "бокс",
+          "relatedTo": "i-i-s-snezhko-kursovaya-бокс",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Клиенты",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фамилия",
+              "caption": "Фамилия",
+              "hidden": false,
+              "index": 7
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Фамилия",
+          "name": "клиенты",
+          "relatedTo": "i-i-s-snezhko-kursovaya-клиенты",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Сотрудники",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фамилия",
+              "caption": "Фамилия",
+              "hidden": false,
+              "index": 8
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Фамилия",
+          "name": "сотрудники",
+          "relatedTo": "i-i-s-snezhko-kursovaya-сотрудники",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Детали",
+  "name": "IISSnezhko_kursovayaДеталиE",
+  "className": "ДеталиE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-snezhko-kursovaya-детали",
+      "modelProjection": "ДеталиE"
+    }
+  ]
+}

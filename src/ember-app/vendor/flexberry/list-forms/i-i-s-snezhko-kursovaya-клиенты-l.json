@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-snezhko-kursovaya-клиенты-e",
+  "editForm": "i-i-s-snezhko-kursovaya-клиенты-e",
+  "external": false,
+  "caption": "Клиенты",
+  "name": "IISSnezhko_kursovayaКлиентыL",
+  "className": "КлиентыL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-snezhko-kursovaya-клиенты",
+      "modelProjection": "КлиентыL"
+    }
+  ]
+}

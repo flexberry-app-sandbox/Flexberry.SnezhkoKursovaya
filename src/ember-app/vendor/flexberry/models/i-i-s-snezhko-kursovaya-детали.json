@@ -1,0 +1,117 @@
+﻿{
+  "name": "IISSnezhko_kursovayaДетали",
+  "modelName": "i-i-s-snezhko-kursovaya-детали",
+  "className": "Детали",
+  "nameSpace": "IIS.Snezhko_kursovaya",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "кодДетали",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "наименование",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "производитель",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "страна",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ДеталиE",
+      "modelName": "i-i-s-snezhko-kursovaya-детали",
+      "attrs": [
+        {
+          "name": "кодДетали",
+          "caption": "Код детали",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "производитель",
+          "caption": "Производитель",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "страна",
+          "caption": "Страна",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ДеталиL",
+      "modelName": "i-i-s-snezhko-kursovaya-детали",
+      "attrs": [
+        {
+          "name": "кодДетали",
+          "caption": "Код детали",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "производитель",
+          "caption": "Производитель",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "страна",
+          "caption": "Страна",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

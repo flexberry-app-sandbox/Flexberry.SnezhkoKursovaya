@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-snezhko-kursovaya-заказ-e",
+  "editForm": "i-i-s-snezhko-kursovaya-заказ-e",
+  "external": false,
+  "caption": "Заказ",
+  "name": "IISSnezhko_kursovayaЗаказL",
+  "className": "ЗаказL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-snezhko-kursovaya-заказ",
+      "modelProjection": "ЗаказL"
+    }
+  ]
+}

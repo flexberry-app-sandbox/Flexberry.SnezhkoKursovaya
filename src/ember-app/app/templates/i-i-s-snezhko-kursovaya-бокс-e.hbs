@@ -1,0 +1,57 @@
+<h3 class="ui header">{{t "forms.i-i-s-snezhko-kursovaya-бокс-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.номерБокса
+      class=(if (v-get validationModel "номерБокса" "isInvalid") "error")
+      label=(t "forms.i-i-s-snezhko-kursovaya-бокс-e.номерБокса-caption")
+      data-test-i-i-s-snezhko-kursovaya-бокс-e-номерБокса=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "номерБокса" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.площадь
+      class=(if (v-get validationModel "площадь" "isInvalid") "error")
+      label=(t "forms.i-i-s-snezhko-kursovaya-бокс-e.площадь-caption")
+      data-test-i-i-s-snezhko-kursovaya-бокс-e-площадь=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "площадь" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-snezhko-kursovaya-бокс-e-типАвтомобиля="true">
+    <label>{{t "forms.i-i-s-snezhko-kursovaya-бокс-e.типАвтомобиля-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-snezhko-kursovaya-тип-автомобиля")
+      value=model.типАвтомобиля
+      class=(if (v-get validationModel "типАвтомобиля" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "типАвтомобиля" "message")}}
+  </div>
+</form>

@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-snezhko-kursovaya-бокс-e",
+  "editForm": "i-i-s-snezhko-kursovaya-бокс-e",
+  "external": false,
+  "caption": "Бокс",
+  "name": "IISSnezhko_kursovayaБоксL",
+  "className": "БоксL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-snezhko-kursovaya-бокс",
+      "modelProjection": "БоксL"
+    }
+  ]
+}

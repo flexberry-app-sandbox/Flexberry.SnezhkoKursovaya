@@ -1,0 +1,47 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Бокс",
+      "projection": "БоксL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Клиенты",
+      "projection": "КлиентыL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Сотрудники",
+      "projection": "СотрудникиL",
+      "detailModelName": null
+    },
+    {
+      "master": "услуга",
+      "displayAttributeName": "наименование",
+      "required": true,
+      "relationName": "СоставЗаказа.Услуга",
+      "projection": "УслугаL",
+      "detailModelName": "i-i-s-snezhko-kursovaya-состав-заказа"
+    }
+  ],
+  "external": false,
+  "caption": "Заказ",
+  "name": "IISSnezhko_kursovayaЗаказE",
+  "className": "ЗаказE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-snezhko-kursovaya-заказ",
+      "modelProjection": "ЗаказE"
+    }
+  ]
+}
